@@ -17,11 +17,11 @@ class Client {
         this._cardNumber = value;
     }
 
-    get _accountBalance() {
+    get accountBalance() {
         return this._accountBalance;
     }
 
-    set _accountBalance(value) {
+    set accountBalance(value) {
         this._accountBalance = value;
     }
 }
