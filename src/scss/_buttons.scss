@@ -1,0 +1,19 @@
+$add-client-button-background: grey;
+$add-money-button-background: lightgreen;
+$remove-money-button-background: #FF5050;
+$amount-button-width: 100px;
+
+#addMoneyButton {
+    background: $add-money-button-background;
+}
+
+#removeMoneyButton {
+    background: $remove-money-button-background;
+}
+
+.amountButton {
+    margin: 5px;
+    width: $amount-button-width;
+    font-size: 16px;
+    font-weight: 500;
+}

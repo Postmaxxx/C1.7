@@ -1,26 +1,27 @@
 :root {
-    --border1-color: darkcyan;
-    --border2-color: green;
+    --client-money-add:#0b0;
+    --client-money-remove:#d00;
+    --input-client-data: #E2D59E
 }
 
-body {
-    margin: 0;
-    padding: 10px;
-    background-color: #aaa;
+.clientMoneyAdd {
+    background: var(--client-money-add);
+}
+
+.clientMoneyRemove {
+    background: var(--client-money-remove);
+}
+
+.clientInput {
+    background: var(--input-client-data);
+}
+:root {
+    --border1-color: darkcyan;
 }
 
 h3 {
     font-size: 20px;
     text-align: center;
-}
-
-.root {
-    background-color: #999;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 .inputs {
@@ -61,29 +62,6 @@ h3 {
     font-weight: 700;
 }
 
-.clientMoneyAdd {
-    background: #0b0;
-}
-
-.clientMoneyRemove {
-    background: #d00;
-}
-
-.amountButton {
-    margin: 5px;
-    width: 100px;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.info {
-    height: 290px;
-    width: 500px;
-    background-color: gray;
-    border: 2px solid var(--border2-color);
-    border-radius: 15%;    
-    display: inline-block;
-}
 
 .clientInfo {
     display: flex;
@@ -91,10 +69,14 @@ h3 {
     align-items: flex-start;
 }
 
-.clientInfoHeader {
+.clientInfoBase {
     margin: 10px;
 }
 
+.clientInfoHeader {
+    font-weight: 800;
+}
+
 .clientInfoData {
-    margin: 10px;
+    margin-right: 20px;
 }

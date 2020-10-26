@@ -10,7 +10,7 @@
         <div class="inputs">
             <input type="text" class="clientInput" id="family" value="Фамилия"><label>Фамилия</label></br>
             <input type="text" class="clientInput" id="name" value="Имя"><label>Имя</label></br>
-            <input type="text" class="clientInput" id="otch" value="Отчетсво"><label>Отчество</label></br>
+            <input type="text" class="clientInput" id="otch" value="Отчество"><label>Отчество</label></br>
             <input type="text" class="clientInput" id="date" value="24.10.2020"><label>Дата рождения</label></br>
             <input type="text" class="clientInput" id="city" value="Иркутск"><label>Город проживания</label></br>
 
@@ -30,14 +30,14 @@
         <div class="info">
             <h3>Информация о выбранном клиенте:</h3>
             <div class="clientInfo">
-                <div class="clientInfoHeader">
+                <div class="clientInfoBase clientInfoHeader">
                     <p>Фамилия, Имя, Отчество:</p>            
                     <p>Дата рождения:</p>          
                     <p>Город проживания:</p>   
                     <p>Номер счета:</p>   
                     <p>Состояние счета:</p>   
                 </div>
-                <div class="clientInfoData">
+                <div class="clientInfoBase clientInfoData">
                     <p id="infoFIO"></p>
                     <p id="infoDate"></p>
                     <p id="infoCity"></p>
@@ -47,7 +47,7 @@
             </div>
         </div>
     </div>
-    <h2>Список клиентов JSON:</h2>
+    <h2>Список клиентов в формате JSON:</h2>
     <div id="clientJSONList">
     </div>
 <script src="bundle.js"></script></body>

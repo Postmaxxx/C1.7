@@ -1,4 +1,5 @@
 import './main.css';
+import './scss/style.scss';
 import  * as cls from './classes';
 
 

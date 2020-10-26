@@ -1,0 +1,17 @@
+:root {
+    --client-money-add:#0b0;
+    --client-money-remove:#d00;
+    --input-client-data: #E2D59E
+}
+
+.clientMoneyAdd {
+    background: var(--client-money-add);
+}
+
+.clientMoneyRemove {
+    background: var(--client-money-remove);
+}
+
+.clientInput {
+    background: var(--input-client-data);
+}
