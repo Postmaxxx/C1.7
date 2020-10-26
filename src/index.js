@@ -117,9 +117,7 @@ function formCardNumberToOutput(cardNumber) {
     let s = String(cardNumber);
     return(s.split("")
     .map((item, number) => {
-        if ((number+1)%4 == 0) {
-            return (item+" ")
-        } else return item;
+        return ((number+1)%4 == 0) ? item+" " : item;
         })
     .join("")
     );
@@ -166,7 +164,7 @@ function changeMoneyToClient(clientNumber, amount, operation) {
 
 document.getElementById("addMoneyButton").addEventListener('click', function() {
     if (clients.length > 0) {
-        changeMoneyToClient(clientsList.selectedIndex, document.getElementById("addMoneyAmount").value.replace(/\D/g, ""), "add");
+        changeMoneyToClient(clientsList.selectedIndex, document.getElementById("addMoneyAmount").value, "add");
         renewClientInformation(clientsList.selectedIndex);
         clearInputFields();
     };
@@ -175,7 +173,7 @@ document.getElementById("addMoneyButton").addEventListener('click', function() {
 
 document.getElementById("removeMoneyButton").addEventListener('click', function() {
     if (clients.length > 0) {
-        changeMoneyToClient(clientsList.selectedIndex, document.getElementById("removeMoneyAmount").value.replace(/\D/g, ""), "remove");
+        changeMoneyToClient(clientsList.selectedIndex, document.getElementById("removeMoneyAmount").value, "remove");
         renewClientInformation(clientsList.selectedIndex);
         clearInputFields();
     };
