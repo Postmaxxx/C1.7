@@ -14,6 +14,14 @@
 
 .clientInput {
     background: var(--input-client-data);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.clientsList {
+    height: 30px;
+    font-size: 16px;
+    background: var(--input-client-data);
 }
 :root {
     --border1-color: darkcyan;

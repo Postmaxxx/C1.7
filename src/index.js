@@ -160,21 +160,25 @@ function changeMoneyToClient(clientNumber, amount, operation) {
                     clients[clientNumber].accountBalance -= amount;
                 } else alert("Недостаточно средств для списания!");
         } else errorInput();
-    }
+    };
 };
 
 
 document.getElementById("addMoneyButton").addEventListener('click', function() {
-    changeMoneyToClient(clientsList.selectedIndex, document.getElementById("addMoneyAmount").value, "add");
-    renewClientInformation(clientsList.selectedIndex);
-    clearInputFields();
+    if (clients.length > 0) {
+        changeMoneyToClient(clientsList.selectedIndex, document.getElementById("addMoneyAmount").value.replace(/\D/g, ""), "add");
+        renewClientInformation(clientsList.selectedIndex);
+        clearInputFields();
+    };
 });
 
 
 document.getElementById("removeMoneyButton").addEventListener('click', function() {
-    changeMoneyToClient(clientsList.selectedIndex, document.getElementById("removeMoneyAmount").value, "remove");
-    renewClientInformation(clientsList.selectedIndex);
-    clearInputFields();
+    if (clients.length > 0) {
+        changeMoneyToClient(clientsList.selectedIndex, document.getElementById("removeMoneyAmount").value.replace(/\D/g, ""), "remove");
+        renewClientInformation(clientsList.selectedIndex);
+        clearInputFields();
+    };
 });
 
 
