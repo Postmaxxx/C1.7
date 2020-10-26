@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C1.7</title>
+<link href="main.css" rel="stylesheet"></head>
+<body>
+    <div class="root">
+        <div class="inputs">
+            <input type="text" class="clientInput" id="family" value="Фамилия"><label>Фамилия</label></br>
+            <input type="text" class="clientInput" id="name" value="Имя"><label>Имя</label></br>
+            <input type="text" class="clientInput" id="otch" value="Отчетсво"><label>Отчество</label></br>
+            <input type="text" class="clientInput" id="date" value="24.10.2020"><label>Дата рождения</label></br>
+            <input type="text" class="clientInput" id="city" value="Иркутск"><label>Город проживания</label></br>
+
+            <button class="addClientButton" id="addClient">Добавить клиента</button>
+        </div>
+        <div class="changeBalanceDiv">
+            <h3>Выберите клиента для работы с балансом:</h3>
+            <select name="clientsList" id="clientsList" class="clientsList"></select>
+
+            <label>Сумма пополнения:</label><input type="text" class="clientMoney clientMoneyAdd" id="addMoneyAmount">
+            <button class="amountButton" id="addMoneyButton">Пополнить</button>
+ 
+            <label>Сумма к списанию:</label><input type="text" class="clientMoney clientMoneyRemove" id="removeMoneyAmount">
+            <button class="amountButton" id="removeMoneyButton">Списать</button>
+        </div>
+
+        <div class="info">
+            <h3>Информация о выбранном клиенте:</h3>
+            <div class="clientInfo">
+                <div class="clientInfoHeader">
+                    <p>Фамилия, Имя, Отчество:</p>            
+                    <p>Дата рождения:</p>          
+                    <p>Город проживания:</p>   
+                    <p>Номер счета:</p>   
+                    <p>Состояние счета:</p>   
+                </div>
+                <div class="clientInfoData">
+                    <p id="infoFIO"></p>
+                    <p id="infoDate"></p>
+                    <p id="infoCity"></p>
+                    <p id="infoCardNumber"></p>
+                    <p id="infoAccount"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Список клиентов JSON:</h2>
+    <div id="clientJSONList">
+    </div>
+<script src="bundle.js"></script></body>
+</html>
+
